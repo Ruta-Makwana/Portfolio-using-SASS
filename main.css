@@ -25,7 +25,7 @@
 }
 
 .home {
-  background-image: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../../images/model-1.jpg");
+  background-image: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../images/model-1.jpg");
   background-size: cover;
   background-position: center top;
   height: 100%;
