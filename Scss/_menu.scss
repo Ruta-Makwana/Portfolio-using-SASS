@@ -1,0 +1,21 @@
+.nav {
+    .menu-nav {
+      text-align: right;
+      &__item {
+        display: inline;
+        padding: 1rem;
+        &.active > a {
+          color: $secondary-color;
+        }
+      }
+      &__link {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        font-weight: 300;
+        @include transition-ease;
+        &:hover {
+          color: orange;
+        }
+      }
+    }
+  }

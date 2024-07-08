@@ -1,0 +1,72 @@
+.projects {
+    padding-bottom: 3rem;
+    &__image {
+      @include background;
+      height: 50vh;
+      width: 100%;
+      text-align: center;
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
+      .text-secondary {
+        margin-bottom: 1rem;
+        font-size: 1.9rem;
+      }
+    }
+    &__items {
+      width: 60vw;
+      margin: 2rem auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    &__item {
+      position: relative;
+      border-bottom: 2px solid $secondary-color;
+      overflow: hidden;
+  
+      img {
+        width: 100%;
+      }
+      &:hover {
+        &::after {
+          top: 0;
+          opacity: 0.7;
+        }
+        .projects__btn {
+          opacity: 1;
+        }
+      }
+  
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        background-color: $secondary-color;
+        height: 100%;
+        //it is at the end of the item
+        top: 100%;
+        @include transition-ease;
+      }
+    }
+    &__buttons {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      // we have to give it a height to make it aligned in the
+      // center of the whole div not just the height of the content
+      height: 100%;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+    &__btn {
+      opacity: 0;
+      @include transition-ease;
+      &:hover {
+        color: set-text-color(#fff);
+      }
+    }
+  }

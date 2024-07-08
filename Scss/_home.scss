@@ -1,0 +1,26 @@
+.home {
+    @include background;
+    //to take the full height of the body
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    &__name {
+      font-size: 5rem;
+      padding-top: 1rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid white;
+      &--last {
+        color: $secondary-color;
+        font-weight: 600;
+      }
+    }
+  }
+  .social-icons {
+    display: flex;
+    flex-direction: column;
+  }
+  footer {
+    transform: rotate(90deg) translate(-3rem, -4rem);
+  }

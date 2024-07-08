@@ -1,0 +1,40 @@
+.about {
+    padding-bottom: 3rem;
+    &__bio-image {
+      @include background;
+      height: 50vh;
+      text-align: center;
+      //use flex in the big parent to drag it to the end of it
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      p {
+        margin-bottom: 2rem;
+        margin-top: 1rem;
+      }
+    }
+    &__bio-text {
+      //if we use flex here , it wont go at the end of the container
+      width: 80%;
+      margin: 0 auto;
+      font-size: 1.1rem;
+    }
+    .jobs {
+      width: 70%;
+      margin: 2rem auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      h1,
+      h5,
+      h6,
+      p {
+        margin: 0.2rem;
+      }
+      &__job {
+        background-color: lighten($primary-color, 10%);
+        padding: 0.5rem;
+        border-bottom: 5px solid $secondary-color;
+      }
+    }
+  }
